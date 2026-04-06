@@ -1,6 +1,58 @@
+:root {
+    /* Paleta de colores */
+    --color-azul: #8FA6CB;
+    --color-lima: #DBF4A7;
+    --color-menta: #D5F9DE;
+    
+    /* Variables de configuración */
+    --color-fondo-barra: var(--color-azul); /* Aquí eliges el color de fondo */
+    --color-texto: #ffffff;
+    --fuente-principal: Arial, sans-serif;
+}
+
+/* Reset básico para que no queden espacios blancos */
 * {
+<<<<<<< HEAD
   margin: 0;
   padding: 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   box-sizing: border-box;
 }
+=======
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.barra-superior {
+    background-color: var(--color-fondo-barra);
+    color: var(--color-texto);
+    font-family: var(--fuente-principal);
+    
+    /* Flexbox para alinear a los extremos */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    /* Espaciado interno */
+    padding: 15px 20px;
+    height: 60px;
+}
+
+.titulo-proyecto {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--color-texto);
+}
+
+.contenedor-contador {
+    font-size: 1rem;
+    display: flex;
+    gap: 5px; /* Espacio entre el texto y el número */
+}
+
+#numero-letras-vistas {
+    font-weight: bold;
+}ß
+>>>>>>> 805a6f9fe7b361c5a028afb70358dc71abdf85f8
