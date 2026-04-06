@@ -8,7 +8,7 @@
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: Fredoka, sans-serif;
     margin: 0;
     background-color: var(--color-menta); 
     color: var(--color-texto);
@@ -68,6 +68,24 @@ body {
     perspective: 1000px;
 }
 
+#seccion-filtros {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px;
+    border-radius: 15px;
+    max-height: 150px;
+}
+
+button {
+    border-radius: 20px;
+    border: none;
+    background-color: #8FA6CB;
+    color: white;
+    font-size: 30px;
+}
+
 .card {
     width: 180px;
     height: 250px;
@@ -93,13 +111,14 @@ body {
     align-items: center;
     justify-content: center;
     box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+    background-color: #ffc107;
 }
 
 
 .card-frente h1 {
     font-size: 5rem;
     margin: 0;
-    color: var(--color-azul);
+    color: white;
 }
 
 .card-dorso {
