@@ -1,105 +1,278 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-     <link rel="stylesheet" href="./css/styles.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
     <title>Document</title>
-</head>
-<body>
-<nav id="barra-principal" class="barra-superior">
-    
-    
-    <div id="nombre-app" class="titulo-proyecto">
-        ABCchallenge
-    </div>
+  </head>
+  <body>
+    <nav id="barra-navegacion">
+      <div id="nombre-proyecto">BCchallenge</div>
+      <div id="contenedor-contador">
+        Letras descubiertas: <span id="contador">0</span> / 26
+      </div>
+    </nav>
+    <main id="galeria-letras">
+      <div id="seccion-filtros">
+        <button id="boton-todas" onclick="filtrar('todas')">Todas</button>
+        <button id="boton-vocales" onclick="filtrar('vocal')">Vocales</button>
+      </div>
+      <!-- A -->
+      <div class="card" data-tipo="vocal" onclick="voltear(this)">
+        <div class="card-frente"><h1>A</h1></div>
+        <div class="card-dorso">
+          <img src="" alt="Aguacate" />
+          <h3>Aguacate</h3>
+        </div>
+      </div>
+      <!-- E -->
+      <div class="card" data-tipo="vocal" onclick="voltear(this)">
+        <div class="card-frente"><h1>E</h1></div>
+        <div class="card-dorso">
+          <img src="" alt="Elefante" />
+          <h3>Elefante</h3>
+        </div>
+      </div>
+      <!-- I -->
+      <div class="card" data-tipo="vocal" onclick="voltear(this)">
+        <div class="card-frente"><h1>I</h1></div>
+        <div class="card-dorso">
+          <img src="" alt="Iguana" />
+          <h3>Iguana</h3>
+        </div>
+      </div>
+      <!-- O -->
+      <div class="card" data-tipo="vocal" onclick="voltear(this)">
+        <div class="card-frente"><h1>O</h1></div>
+        <div class="card-dorso">
+          <img src="" alt="Oso" />
+          <h3>Oso</h3>
+        </div>
+      </div>
+      <!-- U -->
+      <div class="card" data-tipo="vocal" onclick="voltear(this)">
+        <div class="card-frente"><h1>U</h1></div>
+        <div class="card-dorso">
+          <img src="" alt="Uvas" />
+          <h3>Uvas</h3>
+        </div>
+      </div>
 
-    <div id="seccion-contador" class="contenedor-contador">
-        <span>Letras vistas:</span>
-        <span id="numero-letras-vistas">0</span>
-    </div>
+      <!-- B -->
+      <div class="card" data-tipo="consonante" onclick="voltear(this)">
+        <div class="card-frente"><h1>B</h1></div>
+        <div class="card-dorso">
+          <img src="" alt="Ballena" />
+          <h3>Ballena</h3>
+        </div>
+      </div>
 
-</nav>
-<main>
-<input class="btn btn-primary" type="submit" value="Submit">
-<input class="btn btn-primary" type="reset" value="Reset">
+      <!-- C -->
+      <div class="card" data-tipo="consonante" onclick="voltear(this)">
+        <div class="card-frente"><h1>C</h1></div>
+        <div class="card-dorso">
+          <img src="" alt="Casa" />
+          <h3>Casa</h3>
+        </div>
+      </div>
 
+      <!-- D -->
+      <div class="card" data-tipo="consonante" onclick="voltear(this)">
+        <div class="card-frente"><h1>D</h1></div>
+        <div class="card-dorso">
+          <img src="" alt="Dado" />
+          <h3>Dado</h3>
+        </div>
+      </div>
 
-    <div class="card text-bg-primary mb-3" style="max-width: 18rem;">
-  <div class="card-header">Header</div>
-  <div class="card-body">
-    <h5 class="card-title">Primary card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
-  </div>
-</div>
-<div class="card text-bg-secondary mb-3" style="max-width: 18rem;">
-  <div class="card-header">Header</div>
-  <div class="card-body">
-    <h5 class="card-title">Secondary card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
-  </div>
-</div>
-<div class="card text-bg-success mb-3" style="max-width: 18rem;">
-  <div class="card-header">Header</div>
-  <div class="card-body">
-    <h5 class="card-title">Success card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
-  </div>
-</div>
-<div class="card text-bg-danger mb-3" style="max-width: 18rem;">
-  <div class="card-header">Header</div>
-  <div class="card-body">
-    <h5 class="card-title">Danger card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
-  </div>
-</div>
-<div class="card text-bg-warning mb-3" style="max-width: 18rem;">
-  <div class="card-header">Header</div>
-  <div class="card-body">
-    <h5 class="card-title">Warning card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
-  </div>
-</div>
-<div class="card text-bg-info mb-3" style="max-width: 18rem;">
-  <div class="card-header">Header</div>
-  <div class="card-body">
-    <h5 class="card-title">Info card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
-  </div>
-</div>
-<div class="card text-bg-light mb-3" style="max-width: 18rem;">
-  <div class="card-header">Header</div>
-  <div class="card-body">
-    <h5 class="card-title">Light card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
-  </div>
-</div>
-<div class="card text-bg-dark mb-3" style="max-width: 18rem;">
-  <div class="card-header">Header</div>
-  <div class="card-body">
-    <h5 class="card-title">Dark card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
-  </div>
-</div>
+      <!-- F -->
+      <div class="card" data-tipo="consonante" onclick="voltear(this)">
+        <div class="card-frente"><h1>F</h1></div>
+        <div class="card-dorso">
+          <img src="" alt="Flor" />
+          <h3>Flor</h3>
+        </div>
+      </div>
 
-</main>
+      <!-- G -->
+      <div class="card" data-tipo="consonante" onclick="voltear(this)">
+        <div class="card-frente"><h1>G</h1></div>
+        <div class="card-dorso">
+          <img src="" alt="Gato" />
+          <h3>Gato</h3>
+        </div>
+      </div>
 
+      <!-- H -->
+      <div class="card" data-tipo="consonante" onclick="voltear(this)">
+        <div class="card-frente"><h1>H</h1></div>
+        <div class="card-dorso">
+          <img src="" alt="Helado" />
+          <h3>Helado</h3>
+        </div>
+      </div>
 
-<footer>
-    <h2>grupo #7</h2>
-</footer>
+      <!-- J -->
+      <div class="card" data-tipo="consonante" onclick="voltear(this)">
+        <div class="card-frente"><h1>J</h1></div>
+        <div class="card-dorso">
+          <img src="" alt="Jirafa" />
+          <h3>Jirafa</h3>
+        </div>
+      </div>
 
+      <!-- K -->
+      <div class="card" data-tipo="consonante" onclick="voltear(this)">
+        <div class="card-frente"><h1>K</h1></div>
+        <div class="card-dorso">
+          <img src="" alt="Koala" />
+          <h3>Koala</h3>
+        </div>
+      </div>
 
+      <!-- L -->
+      <div class="card" data-tipo="consonante" onclick="voltear(this)">
+        <div class="card-frente"><h1>L</h1></div>
+        <div class="card-dorso">
+          <img src="" alt="Luna" />
+          <h3>Luna</h3>
+        </div>
+      </div>
 
+      <!-- M -->
+      <div class="card" data-tipo="consonante" onclick="voltear(this)">
+        <div class="card-frente"><h1>M</h1></div>
+        <div class="card-dorso">
+          <img src="" alt="Mano" />
+          <h3>Mano</h3>
+        </div>
+      </div>
 
+      <!-- N -->
+      <div class="card" data-tipo="consonante" onclick="voltear(this)">
+        <div class="card-frente"><h1>N</h1></div>
+        <div class="card-dorso">
+          <img src="" alt="Nube" />
+          <h3>Nube</h3>
+        </div>
+      </div>
 
+      <!-- Ñ -->
+      <div class="card" data-tipo="consonante" onclick="voltear(this)">
+        <div class="card-frente"><h1>Ñ</h1></div>
+        <div class="card-dorso">
+          <img src="" alt="Ñandú" />
+          <h3>Ñandú</h3>
+        </div>
+      </div>
 
+      <!-- P -->
+      <div class="card" data-tipo="consonante" onclick="voltear(this)">
+        <div class="card-frente"><h1>P</h1></div>
+        <div class="card-dorso">
+          <img src="" alt="Perro" />
+          <h3>Perro</h3>
+        </div>
+      </div>
 
+      <!-- Q -->
+      <div class="card" data-tipo="consonante" onclick="voltear(this)">
+        <div class="card-frente"><h1>Q</h1></div>
+        <div class="card-dorso">
+          <img src="" alt="Queso" />
+          <h3>Queso</h3>
+        </div>
+      </div>
 
+      <!-- R -->
+      <div class="card" data-tipo="consonante" onclick="voltear(this)">
+        <div class="card-frente"><h1>R</h1></div>
+        <div class="card-dorso">
+          <img src="" alt="Ratón" />
+          <h3>Ratón</h3>
+        </div>
+      </div>
 
-<script src="./js/script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-</body>
+      <!-- S -->
+      <div class="card" data-tipo="consonante" onclick="voltear(this)">
+        <div class="card-frente"><h1>S</h1></div>
+        <div class="card-dorso">
+          <img src="" alt="Sol" />
+          <h3>Sol</h3>
+        </div>
+      </div>
+
+      <!-- T -->
+      <div class="card" data-tipo="consonante" onclick="voltear(this)">
+        <div class="card-frente"><h1>T</h1></div>
+        <div class="card-dorso">
+          <img src="" alt="Tren" />
+          <h3>Tren</h3>
+        </div>
+      </div>
+
+      <!-- V -->
+      <div class="card" data-tipo="consonante" onclick="voltear(this)">
+        <div class="card-frente"><h1>V</h1></div>
+        <div class="card-dorso">
+          <img src="" alt="Vaca" />
+          <h3>Vaca</h3>
+        </div>
+      </div>
+
+      <!-- W -->
+      <div class="card" data-tipo="consonante" onclick="voltear(this)">
+        <div class="card-frente"><h1>W</h1></div>
+        <div class="card-dorso">
+          <img src="" alt="Waffle" />
+          <h3>Waffle</h3>
+        </div>
+      </div>
+
+      <!-- X -->
+      <div class="card" data-tipo="consonante" onclick="voltear(this)">
+        <div class="card-frente"><h1>X</h1></div>
+        <div class="card-dorso">
+          <img src="" alt="Xilófono" />
+          <h3>Xilófono</h3>
+        </div>
+      </div>
+
+      <!-- Y -->
+      <div class="card" data-tipo="consonante" onclick="voltear(this)">
+        <div class="card-frente"><h1>Y</h1></div>
+        <div class="card-dorso">
+          <img src="" alt="Yoyo" />
+          <h3>Yoyo</h3>
+        </div>
+      </div>
+
+      <!-- Z -->
+      <div class="card" data-tipo="consonante" onclick="voltear(this)">
+        <div class="card-frente"><h1>Z</h1></div>
+        <div class="card-dorso">
+          <img src="" alt="Zapato" />
+          <h3>Zapato</h3>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <h2>grupo #7</h2>
+    </footer>
+
+    <script src="./js/script.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
