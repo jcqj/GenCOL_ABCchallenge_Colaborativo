@@ -11,28 +11,36 @@
     />
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/styles.css" />
-    <title>Document</title>
+    <title>BCchallenge</title>
   </head>
   <body>
+
+    <!-- NAVEGACIÓN -->
     <nav id="barra-navegacion">
       <div id="nombre-proyecto">BCchallenge</div>
       <div id="contenedor-contador">
-        Letras descubiertas: <span id="contador">0</span> / 26
+        Letras descubiertas: <span id="contador">0</span> / 27
       </div>
     </nav>
+
+    
+    <div id="seccion-filtros">
+      <button id="boton-todas" onclick="filtrar('todas')">Todas</button>
+      <button id="boton-vocales" onclick="filtrar('vocal')">Vocales</button>
+    </div>
+
+  
     <main id="galeria-letras">
-      <div id="seccion-filtros">
-        <button id="boton-todas" onclick="filtrar('todas')">Todas</button>
-        <button id="boton-vocales" onclick="filtrar('vocal')">Vocales</button>
-      </div>
+
       <!-- A -->
       <div class="card" data-tipo="vocal" onclick="voltear(this)">
         <div class="card-frente"><h1>A</h1></div>
         <div class="card-dorso">
           <img src="./assets/A.jpg" alt="Avestruz" />
-          <h3>Aguacate</h3>
+          <h3>Avestruz</h3>
         </div>
       </div>
+
       <!-- E -->
       <div class="card" data-tipo="vocal" onclick="voltear(this)">
         <div class="card-frente"><h1>E</h1></div>
@@ -41,6 +49,7 @@
           <h3>Elefante</h3>
         </div>
       </div>
+
       <!-- I -->
       <div class="card" data-tipo="vocal" onclick="voltear(this)">
         <div class="card-frente"><h1>I</h1></div>
@@ -49,6 +58,7 @@
           <h3>Iguana</h3>
         </div>
       </div>
+
       <!-- O -->
       <div class="card" data-tipo="vocal" onclick="voltear(this)">
         <div class="card-frente"><h1>O</h1></div>
@@ -57,11 +67,13 @@
           <h3>Oso</h3>
         </div>
       </div>
+
       <!-- U -->
       <div class="card" data-tipo="vocal" onclick="voltear(this)">
         <div class="card-frente"><h1>U</h1></div>
         <div class="card-dorso">
           <img src="./assets/Unicorno.png" alt="Unicornio" />
+          <h3>Unicornio</h3>
           <h3>Unicornio</h3>
         </div>
       </div>
@@ -79,7 +91,7 @@
       <div class="card" data-tipo="consonante" onclick="voltear(this)">
         <div class="card-frente"><h1>C</h1></div>
         <div class="card-dorso">
-          <img src="./assets/C.jpg" alt="Castor" />
+          <img src="./assets/C.jpg" alt="Casa" />
           <h3>Castor</h3>
         </div>
       </div>
@@ -88,7 +100,7 @@
       <div class="card" data-tipo="consonante" onclick="voltear(this)">
         <div class="card-frente"><h1>D</h1></div>
         <div class="card-dorso">
-          <img src="./assets/D.png" alt="Delfín" />
+          <img src="./assets/D.png" alt="Dado" />
           <h3>Delfín</h3>
         </div>
       </div>
@@ -216,6 +228,8 @@
         <div class="card-dorso">
           <img src="./assets/Tigre.png" alt="Tigre" />
           <h3>Tigre</h3>
+          <img src="./assets/Tigre.png" alt="Tigre" />
+          <h3>Tigre</h3>
         </div>
       </div>
 
@@ -263,10 +277,19 @@
           <h3>Zorro</h3>
         </div>
       </div>
+
     </main>
 
-    <footer>
-      <h2>grupo #7</h2>
+    <!-- FOOTER -->
+    <footer id="seccion-equipo">
+      <h2 id="titulo-equipo">Equipo #7</h2>
+      <div id="lista-integrantes">
+        <p>Fabian Beltran</p>
+        <p>Juan Quevedo</p>
+        <p>Enith Vargas</p>
+        <p>Jurany Ramirez</p>
+        <p>Robinson Salamanca</p>
+      </div>
     </footer>
 
     <script src="./js/script.js"></script>
@@ -276,14 +299,4 @@
       crossorigin="anonymous"
     ></script>
   </body>
-  <footer id="seccion-equipo">
-        <h2 id="titulo-equipo">Equipo #7</h2>
-        <div id="lista-integrantes">
-            <p>Fabian Beltran </p>
-            <p>Juan Quevedo</p>
-            <p>Enith Vargas</p>
-            <p>Jurany Ramirez</p>
-            <p>Robinson Salamanca</p>
-        </div>
-    </footer>
 </html>
